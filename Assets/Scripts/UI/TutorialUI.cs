@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class TutorialUI : MonoBehaviour {
 
-
     [SerializeField] private TextMeshProUGUI keyMoveUpText;
     [SerializeField] private TextMeshProUGUI keyMoveDownText;
     [SerializeField] private TextMeshProUGUI keyMoveLeftText;
@@ -16,7 +15,6 @@ public class TutorialUI : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI keyGamepadInteractText;
     [SerializeField] private TextMeshProUGUI keyGamepadInteractAlternateText;
     [SerializeField] private TextMeshProUGUI keyGamepadPauseText;
-
 
     private void Start() {
         GameInput.Instance.OnBindingRebind += GameInput_OnBindingRebind;

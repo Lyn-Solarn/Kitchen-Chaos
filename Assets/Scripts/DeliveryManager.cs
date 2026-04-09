@@ -55,10 +55,10 @@ public class DeliveryManager : MonoBehaviour {
                 // Has the same number of ingredients
                 bool plateContentsMatchesRecipe = true;
                 foreach (KitchenObjectSO recipeKitchenObjectSO in waitingRecipeSO.kitchenObjectSOList) {
-                    // Cycling through all ingredients in the Recipe
+                    // Cycling through all ingredients in the recipe
                     bool ingredientFound = false;
                     foreach (KitchenObjectSO plateKitchenObjectSO in plateKitchenObject.GetKitchenObjectSOList()) {
-                        // Cycling through all ingredients in the Plate
+                        // Cycling through all ingredients in the plate
                         if (plateKitchenObjectSO == recipeKitchenObjectSO) {
                             // Ingredient matches
                             ingredientFound = true;
@@ -66,7 +66,7 @@ public class DeliveryManager : MonoBehaviour {
                         }
                     }
                     if (!ingredientFound) {
-                        // This Recipe ingredient was not found on the Plate
+                        // This Recipe ingredient was not found on the plate
                         plateContentsMatchesRecipe = false;
                     }
                 }

@@ -4,25 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class KitchenGameManager : MonoBehaviour {
-
-
+    
     public static KitchenGameManager Instance { get; private set; }
-
-
 
     public event EventHandler OnStateChanged;
     public event EventHandler OnGamePaused;
     public event EventHandler OnGameUnpaused;
-
-
+    
     private enum State {
         WaitingToStart,
         CountdownToStart,
         GamePlaying,
         GameOver,
     }
-
-
+    
     private State state;
     private float countdownToStartTimer = 3f;
     private float gamePlayingTimer;

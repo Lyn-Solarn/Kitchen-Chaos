@@ -34,7 +34,7 @@ public class PlatesCounter : BaseCounter {
 
     public override void Interact(Player player) {
         if (!player.HasKitchenObject()) {
-            // Player is empty handed
+            // Player is emptyhanded
             if (platesSpawnedAmount > 0) {
                 // There's at least one plate here
                 platesSpawnedAmount--;

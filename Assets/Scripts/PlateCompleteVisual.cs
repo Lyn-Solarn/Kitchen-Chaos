@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PlateCompleteVisual : MonoBehaviour {
 
-
     [Serializable]
     public struct KitchenObjectSO_GameObject {
 
@@ -13,7 +12,6 @@ public class PlateCompleteVisual : MonoBehaviour {
         public GameObject gameObject;
 
     }
-
 
     [SerializeField] private PlateKitchenObject plateKitchenObject;
     [SerializeField] private List<KitchenObjectSO_GameObject> kitchenObjectSOGameObjectList;

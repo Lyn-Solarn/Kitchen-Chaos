@@ -29,7 +29,7 @@ public class CuttingCounter : BaseCounter, IHasProgress {
             if (player.HasKitchenObject()) {
                 // Player is carrying something
                 if (HasRecipeWithInput(player.GetKitchenObject().GetKitchenObjectSO())) {
-                    // Player carrying something that can be Cut
+                    // Player carrying something that can be cut
                     player.GetKitchenObject().SetKitchenObjectParent(this);
                     cuttingProgress = 0;
 
@@ -61,7 +61,7 @@ public class CuttingCounter : BaseCounter, IHasProgress {
 
     public override void InteractAlternate(Player player) {
         if (HasKitchenObject() && HasRecipeWithInput(GetKitchenObject().GetKitchenObjectSO())) {
-            // There is a KitchenObject here AND it can be cut
+            // There is a KitchenObject here and it can be cut
             cuttingProgress++;
 
             OnCut?.Invoke(this, EventArgs.Empty);
