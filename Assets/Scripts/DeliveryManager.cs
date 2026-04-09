@@ -60,7 +60,7 @@ public class DeliveryManager : MonoBehaviour {
                     foreach (KitchenObjectSO plateKitchenObjectSO in plateKitchenObject.GetKitchenObjectSOList()) {
                         // Cycling through all ingredients in the Plate
                         if (plateKitchenObjectSO == recipeKitchenObjectSO) {
-                            // Ingredient matches!
+                            // Ingredient matches
                             ingredientFound = true;
                             break;
                         }
@@ -72,7 +72,7 @@ public class DeliveryManager : MonoBehaviour {
                 }
 
                 if (plateContentsMatchesRecipe) {
-                    // Player delivered the correct recipe!
+                    // Player delivered the correct recipe
 
                     successfulRecipesAmount++;
 
@@ -85,7 +85,7 @@ public class DeliveryManager : MonoBehaviour {
             }
         }
 
-        // No matches found!
+        // No matches found
         // Player did not deliver a correct recipe
         OnRecipeFailed?.Invoke(this, EventArgs.Empty);
     }
